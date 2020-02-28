@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!-- Ligne Calcul / résultat-->
+    <LinearLayout
+        style="@style/linearLayoutHorizontal">
+
+        <TextView
+            android:id="@+id/textCalcul"
+            style="@style/textViewVersionLinearLayout"
+            android:layout_weight="2"
+            android:hint="@string/text_calcul" />
+
+        <TextView
+            android:id="@+id/textResult"
+            style="@style/textViewVersionLinearLayout"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- PAVE DIGITAL -->
+    <LinearLayout
+        android:id="@+id/linearLayoutDigit"
+        style="@style/linearLayoutHorizontal">
+
+        <!-- Pave sans le = -->
+        <LinearLayout
+            style="@style/linearLayoutVertical"
+            android:layout_weight="0.8">
+
+            <!-- premiere ligne PAVE -->
+            <LinearLayout
+                style="@style/linearLayoutHorizontal">
+
+                <Button
+                    android:tag="@string/seven"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/seven"/>
+
+                <Button
+                    android:tag="@string/eight"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/eight"/>
+                <Button
+                    android:tag="@string/nine"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/nine"/>
+                <Button
+                    android:tag="@string/plus"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/plus"/>
+
+            </LinearLayout>
+
+            <!-- deuxieme ligne PAVE -->
+            <LinearLayout
+                style="@style/linearLayoutHorizontal">
+
+                <Button
+                    android:tag="@string/four"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/four"/>
+
+                <Button
+                    android:tag="@string/five"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/five"/>
+                <Button
+                    android:tag="@string/six"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/six"/>
+                <Button
+                    android:tag="@string/minus"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/minus"/>
+
+            </LinearLayout>
+
+            <!-- troisieme ligne PAVE -->
+            <LinearLayout
+                style="@style/linearLayoutHorizontal">
+
+                <Button
+                    android:tag="@string/one"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/one"/>
+
+                <Button
+                    android:tag="@string/two"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/two"/>
+                <Button
+                    android:tag="@string/three"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/three"/>
+                <Button
+                    android:tag="@string/times"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/times"/>
+
+            </LinearLayout>
+
+            <!-- quatrieme ligne PAVE -->
+            <LinearLayout
+                style="@style/linearLayoutHorizontal">
+
+                <Button
+                    android:tag="@string/zero"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/zero"/>
+
+                <Button
+                    android:tag="@string/divided"
+                    style="@style/buttonVersionLinearLayout"
+                    android:text="@string/divided"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/equal_btn"
+            android:tag="@string/equal"
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+            android:layout_weight="0.2"
+            android:text="@string/equal"
+            android:onClick="clickHandler"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
